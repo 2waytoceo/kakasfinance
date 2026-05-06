@@ -1,0 +1,49 @@
+# ── Node ─────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ── Environment & Secrets (NEVER COMMIT) ─────
+.env
+.env.*
+.env.local
+.env.production
+
+# ── Axis Bank credentials ─────────────────────
+*.pem
+*.key
+*.p12
+*.cert
+axis_credentials.json
+secrets/
+
+# ── Vercel ────────────────────────────────────
+.vercel/
+
+# ── Build ─────────────────────────────────────
+dist/
+build/
+.next/
+out/
+
+# ── OS ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Editors ───────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Logs ──────────────────────────────────────
+logs/
+*.log
+*.pid
+
+# ── Test / Coverage ───────────────────────────
+coverage/
+.nyc_output/

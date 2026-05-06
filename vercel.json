@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "name": "axis-bank-corporate-payout",
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "public/**",   "use": "@vercel/static" },
+    { "src": "index.html",  "use": "@vercel/static" },
+    { "src": "style.css",   "use": "@vercel/static" },
+    { "src": "script.js",   "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/token",    "dest": "/api/token.js"    },
+    { "src": "/api/payout",   "dest": "/api/payout.js"   },
+    { "src": "/api/status",   "dest": "/api/status.js"   },
+    { "src": "/api/callback", "dest": "/api/callback.js" },
+    { "src": "/(.*)",         "dest": "/index.html"      }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin",  "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type,Authorization,X-IBM-Client-Id" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "DENY" },
+        { "key": "X-XSS-Protection",       "value": "1; mode=block" }
+      ]
+    }
+  ],
+  "env": {
+    "AXIS_CLIENT_ID":       "@axis_client_id",
+    "AXIS_CLIENT_SECRET":   "@axis_client_secret",
+    "AXIS_IBM_CLIENT_ID":   "@axis_ibm_client_id",
+    "AXIS_HMAC_KEY":        "@axis_hmac_key",
+    "AXIS_CORP_ACCOUNT":    "@axis_corp_account",
+    "AXIS_DEBIT_ACCOUNT":   "@axis_debit_account",
+    "APP_BASE_URL":         "@app_base_url",
+    "CALLBACK_URL":         "@callback_url",
+    "JWT_SECRET":           "@jwt_secret",
+    "OWNER_EMAIL":          "2waytoceo@gmail.com",
+    "OWNER_PASSWORD_HASH":  "@owner_password_hash"
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <rect width="320" height="80" fill="white"/>
+  <!-- Red A mark -->
+  <polygon points="35,12 50,12 68,62 55,62 50,46 36,46 31,62 18,62" fill="#B71C1C"/>
+  <rect x="33" y="38" width="20" height="5" rx="1" fill="#B71C1C"/>
+  <!-- AXIS text -->
+  <text x="80" y="46" font-family="Georgia,serif" font-size="32" font-weight="700" fill="#1a1a1a" letter-spacing="2">AXIS</text>
+  <!-- BANK text -->
+  <text x="80" y="64" font-family="Georgia,serif" font-size="14" font-weight="400" fill="#B71C1C" letter-spacing="6">BANK</text>
+  <!-- Tagline -->
+  <text x="220" y="46" font-family="Arial,sans-serif" font-size="9" fill="#888888" letter-spacing="1">BADHTE CHALO</text>
+</svg>
