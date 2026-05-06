@@ -101,7 +101,7 @@ npx vercel dev
 | Field    | Value                |
 |----------|----------------------|
 | Email    | `2waytoceo@gmail.com` |
-| Password | `Kali@231800'`        |
+| Password | `xxxxxxxxx'`        |
 
 ---
 
